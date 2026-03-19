@@ -21,16 +21,14 @@ export default function OAuthCallback() {
       return;
     }
 
-    // MOCK token exchange
-    console.log("SETTING TOKEN...");
+    // SET TOKEN
     tokenStore.setTokens("mock_access_token");
 
-    console.log("TOKEN NOW:", tokenStore.getAccessToken());
+    console.log("TOKEN SET:", tokenStore.getAccessToken());
 
     sessionStorage.removeItem("code_verifier");
 
-    // IMPORTANT: SPA navigation (no reload)
-    navigate("/profile");
+    navigate("/profile"); // IMPORTANT
   }, []);
 
   return <h1>Processing login...</h1>;

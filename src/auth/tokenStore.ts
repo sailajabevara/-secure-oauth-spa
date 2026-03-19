@@ -1,5 +1,4 @@
 
-
 let accessToken: string | null = null;
 
 export const tokenStore = {
@@ -14,5 +13,5 @@ export const tokenStore = {
   }
 };
 
-// REQUIRED FOR TESTING
+// global function
 (window as any).getAuthToken = () => accessToken;
